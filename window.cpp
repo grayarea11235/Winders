@@ -1,12 +1,6 @@
 #include <windows.h>
+#include "window.h"
 
-typedef struct {
-	WNDCLASSEX wc; 
-	HWND hwnd; 		
-} window_t;
-
-
-#include <windows.h>
 
 /* This is where all the input to the window goes to */
 LRESULT CALLBACK _WndProc(HWND hwnd, UINT Message, WPARAM wParam, LPARAM lParam) {
@@ -59,6 +53,17 @@ window_t *init_window(HINSTANCE hInstance) {
 	}
 
 	return new_window;
+}
+
+int run_window() {
+	MSG msg;
+	
+	while(GetMessage(&msg, NULL, 0, 0) > 0) { 
+		TranslateMessage(&msg); 
+		DispatchMessage(&msg); 
+	}
+	
+	return msg.wParam;
 }
 
 void destroy_window(window_t *wnd) {

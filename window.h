@@ -6,4 +6,4 @@ typedef struct {
 } window_t;
 
 window_t *init_window(HINSTANCE hInstance);
-void run_window();
+int run_window();
