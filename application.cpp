@@ -8,6 +8,9 @@ static application_t *application;
 LRESULT CALLBACK app_wnd_proc(HWND hwnd, UINT Message, WPARAM wParam, LPARAM lParam) {
 	switch(Message) {
 		
+		case WM_CREATE:
+			break;
+		
 		/* Upon destruction, tell the main thread to stop */
 		case WM_DESTROY: {
 			PostQuitMessage(0);
