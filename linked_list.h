@@ -2,8 +2,13 @@
 #define _LINKED_LIST_H
 
 typedef struct {
-	void *node;
-	void *next;
+	void *data;
+	int size;
+} linked_list_iitem_t;
+
+typedef struct {
+	linked_list_iitem_t *node;
+	linked_list_iitem_t *next;
 	long length;	
 } linked_list_t;
 
@@ -17,8 +22,11 @@ linked_list_t *create_linked_list() {
 }
 
 void add_item(linked_list_t *list, void *node) {
-	
+		
 }
 
+void *get_item(linked_list_t *list) {
+	
+}
 
 #endif
