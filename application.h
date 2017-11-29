@@ -2,6 +2,13 @@
 
 #include "button.h"
 
+#define CTRL_RADIO 0
+#define CTRL_BUTTON 1
+
+typedef enum {
+	
+} control_t;
+
 typedef union {
 	int type;	
 } control_t;
