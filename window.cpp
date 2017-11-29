@@ -2,7 +2,7 @@
 #include "window.h"
 
 
-/* This is where all the input to the window goes to */
+
 LRESULT CALLBACK _WndProc(HWND hwnd, UINT Message, WPARAM wParam, LPARAM lParam) {
 	switch(Message) {
 		

@@ -41,3 +41,5 @@ void app_add_form(control_t *control) {
 	
 }
 
+void application_run() {
+}

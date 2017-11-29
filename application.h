@@ -6,15 +6,13 @@
 #define CTRL_BUTTON 1
 
 typedef enum {
-	
-} control_t;
+
+} control_type_t;
 
 typedef union {
-	int type;	
+	int type;
+	void *control_data;
 } control_t;
-
-typedef struct { 
-} form_t;
 
 typedef struct {
 	HINSTANCE hInstance;
@@ -25,3 +23,5 @@ typedef struct {
 
 application_t *get_application();
 application_t *init_application(HINSTANCE hInstance, const char *name);
+void application_run();
+
