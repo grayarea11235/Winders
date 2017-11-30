@@ -1,6 +1,8 @@
 #ifndef _LINKED_LIST_H
 #define _LINKED_LIST_H
 
+#include <windows.h>
+
 typedef struct {
 	void *data;
 	int size;
@@ -13,7 +15,7 @@ typedef struct {
 } linked_list_t;
 
 linked_list_t *create_linked_list() {
-	linked_list_t *res = malloc(1 * sizeof(linked_list_t));
+	linked_list_t *res = (linked_list_t *)malloc(1 * sizeof(linked_list_t));
 	
 	res->length = 0;
 	res->node = NULL;
@@ -23,7 +25,7 @@ linked_list_t *create_linked_list() {
 }
 
 void add_item(linked_list_t *list, void *node) {
-		
+			
 }
 
 void *get_item(linked_list_t *list) {
